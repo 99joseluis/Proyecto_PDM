@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="#F0F6F6"
+        tools:context=".Registro">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:gravity="center"
+            android:text="Register"
+            android:textColor="#000"
+            android:fontFamily="cursive"
+            android:textSize="40dp"
+            android:background="@drawable/welcome"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="25dp"
+            android:text="Name: "
+            android:textStyle="italic"
+            android:textSize="15dp"/>
+
+        <EditText
+            android:id="@+id/nameRegister"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="25dp"
+            android:hint="name"
+            android:textSize="15dp"
+            android:layout_marginBottom="15dp"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="25dp"
+            android:text="Surname: "
+            android:textStyle="italic"
+            android:textSize="15dp"/>
+
+        <EditText
+            android:id="@+id/surnameRegister"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="25dp"
+            android:hint="Username"
+            android:textSize="15dp"
+            android:layout_marginBottom="30dp"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="25dp"
+            android:text="Username: "
+            android:textStyle="italic"
+            android:textSize="15dp"/>
+
+        <EditText
+            android:id="@+id/usernameRegister"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="25dp"
+            android:hint="Username"
+            android:textSize="15dp"
+            android:layout_marginBottom="30dp"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="25dp"
+            android:text="Password: "
+            android:textStyle="italic"
+            android:textSize="15dp"/>
+
+        <EditText
+            android:id="@+id/passwordRegister"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="25dp"
+            android:hint="password"
+            android:textSize="15dp"
+            android:inputType="textPassword"
+            android:layout_marginBottom="5dp"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="25dp"
+            android:text="Confirm password: "
+            android:textStyle="italic"
+            android:textSize="15dp"/>
+
+        <EditText
+            android:id="@+id/passwordRRegister"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="25dp"
+            android:hint="password"
+            android:textSize="15dp"
+            android:inputType="textPassword"
+            android:layout_marginBottom="30dp"/>
+
+
+        <Button
+            android:id="@+id/register"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="30dp"
+            android:layout_marginBottom="30dp"
+            android:text="Register"
+            android:background="@drawable/button_bg"
+            android:textColor="#fafafa"
+            android:onClick="goMenu"/>
+
+    </LinearLayout>
+</ScrollView>
