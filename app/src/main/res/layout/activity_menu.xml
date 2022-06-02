@@ -1,159 +1,33 @@
 <?xml version="1.0" encoding="utf-8"?>
-
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".Menu">
 
-    <RelativeLayout
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
-        android:background="#F0F6F6"
-        tools:context=".Menu">
+        android:gravity="center">
 
-        <ImageButton
-            android:id="@+id/iB1"
-            android:layout_width="190dp"
-            android:layout_height="200dp"
-            android:layout_alignParentLeft="true"
-            android:layout_marginLeft="5pt"
-            android:layout_marginTop="5pt"
-            android:layout_marginRight="5pt"
-            android:scaleType="fitXY"
-            android:src="@drawable/Alitas" />
-
-        <TextView
-            android:id="@+id/tv1"
-            android:layout_width="190dp"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="5pt"
-            android:text="alitas (10pzas)   $150"
-            android:textAlignment="center"
-            android:layout_below="@id/iB1"/>
-
-
-        <ImageButton
-            android:id="@+id/iB2"
-            android:layout_width="190dp"
-            android:layout_height="200dp"
-            android:layout_alignParentRight="true"
-            android:layout_marginLeft="5pt"
-            android:layout_marginTop="5pt"
-            android:layout_marginRight="5pt"
-            android:scaleType="fitXY"
-            android:src="@drawable/boneless" />
-
-        <TextView
-            android:id="@+id/tv2"
-            android:layout_width="190dp"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="5pt"
-            android:layout_marginRight="5pt"
-            android:text="boneless (10pzas)  $200"
-            android:textAlignment="center"
-            android:layout_toEndOf="@id/tv1"
-            android:layout_below="@id/iB2"/>
-
-        <ImageButton
-            android:id="@+id/iB3"
-            android:layout_width="190dp"
-            android:layout_height="200dp"
-            android:layout_below="@id/tv1"
-            android:layout_alignParentLeft="true"
-            android:layout_marginLeft="5pt"
-            android:layout_marginTop="5pt"
-            android:layout_marginRight="5pt"
-            android:scaleType="fitXY"
-            android:src="@drawable/BigBurger" />
-
-        <TextView
-            android:id="@+id/tv3"
-            android:layout_width="190dp"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="5pt"
-            android:text="Big Burger    $260"
-            android:textAlignment="center"
-            android:layout_below="@id/iB3"/>
-
-
-        <ImageButton
-            android:id="@+id/iB4"
-            android:layout_width="190dp"
-            android:layout_height="200dp"
-            android:layout_below="@id/tv2"
-            android:layout_alignParentRight="true"
-            android:layout_marginLeft="5pt"
-            android:layout_marginTop="5pt"
-            android:layout_marginRight="5pt"
-            android:scaleType="fitXY"
-            android:src="@drawable/BigChesseBurger" />
-
-        <TextView
-            android:id="@+id/tv4"
-            android:layout_width="190dp"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="5pt"
-            android:layout_marginRight="5pt"
-            android:text="Chesse Burger    $240"
-            android:textAlignment="center"
-            android:layout_toEndOf="@id/tv3"
-            android:layout_below="@id/iB4"/>
-
-        <ImageButton
-            android:id="@+id/iB5"
-            android:layout_width="190dp"
-            android:layout_height="200dp"
-            android:layout_below="@id/tv3"
-            android:layout_alignParentLeft="true"
-            android:layout_marginLeft="5pt"
-            android:layout_marginTop="5pt"
-            android:layout_marginRight="5pt"
-            android:scaleType="fitXY"
-            android:src="@drawable/PaqueteFamiliar" />
-
-        <TextView
-            android:id="@+id/tv5"
-            android:layout_width="190dp"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="5pt"
-            android:text="Family pack   $350"
-            android:textAlignment="center"
-            android:layout_below="@id/iB5"/>
-
-
-        <ImageButton
-            android:id="@+id/iB6"
-            android:layout_width="190dp"
-            android:layout_height="200dp"
-            android:layout_below="@id/tv4"
-            android:layout_alignParentRight="true"
-            android:layout_marginLeft="5pt"
-            android:layout_marginTop="5pt"
-            android:layout_marginRight="5pt"
-            android:scaleType="fitXY"
-            android:src="@drawable/PaqueteFamiliar2" />
-
-        <TextView
-            android:id="@+id/tv6"
-            android:layout_width="190dp"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="5pt"
-            android:layout_marginRight="5pt"
-            android:text="Family pack   $280"
-            android:textAlignment="center"
-            android:layout_toEndOf="@id/tv5"
-            android:layout_below="@id/iB6"/>
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/reciclerView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
 
         <Button
-            android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:layout_marginHorizontal="30dp"
-            android:layout_below="@id/tv6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:background="@drawable/button_bg"
             android:text="Continuar"
+            android:textSize="15dp"
+            android:textAlignment="center"
+            android:layout_margin="5dp"
             android:onClick="comprar"/>
 
-    </RelativeLayout>
+    </LinearLayout>
+
 </ScrollView>

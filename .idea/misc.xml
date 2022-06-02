@@ -13,11 +13,16 @@
         <entry key="..\:/Users/jose_/Desktop/Fciencias/2022-2/PDM/Profesor/TareasPDM/app/src/main/res/layout-w936dp/activity_login.xml" value="0.15390625" />
         <entry key="..\:/Users/jose_/Desktop/Fciencias/2022-2/PDM/Profesor/TareasPDM/app/src/main/res/layout/activity_carrito.xml" value="0.1" />
         <entry key="..\:/Users/jose_/Desktop/Fciencias/2022-2/PDM/Profesor/TareasPDM/app/src/main/res/layout/activity_login.xml" value="0.20520833333333333" />
-        <entry key="..\:/Users/jose_/Desktop/Fciencias/2022-2/PDM/Profesor/TareasPDM/app/src/main/res/layout/activity_main.xml" value="0.2" />
-        <entry key="..\:/Users/jose_/Desktop/Fciencias/2022-2/PDM/Profesor/TareasPDM/app/src/main/res/layout/activity_menu.xml" value="0.25" />
+        <entry key="..\:/Users/jose_/Desktop/Fciencias/2022-2/PDM/Profesor/TareasPDM/app/src/main/res/layout/activity_main.xml" value="0.4521880064829822" />
+        <entry key="..\:/Users/jose_/Desktop/Fciencias/2022-2/PDM/Profesor/TareasPDM/app/src/main/res/layout/activity_menu.xml" value="0.16" />
+        <entry key="..\:/Users/jose_/Desktop/Fciencias/2022-2/PDM/Profesor/TareasPDM/app/src/main/res/layout/activity_pago.xml" value="0.13333333333333333" />
         <entry key="..\:/Users/jose_/Desktop/Fciencias/2022-2/PDM/Profesor/TareasPDM/app/src/main/res/layout/activity_register.xml" value="0.33" />
+        <entry key="..\:/Users/jose_/Desktop/Fciencias/2022-2/PDM/Profesor/TareasPDM/app/src/main/res/layout/compra.xml" value="0.14" />
+        <entry key="..\:/Users/jose_/Desktop/Fciencias/2022-2/PDM/Profesor/TareasPDM/app/src/main/res/layout/cortado.xml" value="0.12916666666666668" />
         <entry key="..\:/Users/jose_/Desktop/Fciencias/2022-2/PDM/Profesor/TareasPDM/app/src/main/res/layout/messages.xml" value="0.209375" />
+        <entry key="..\:/Users/jose_/Desktop/Fciencias/2022-2/PDM/Profesor/TareasPDM/app/src/main/res/layout/producto_item.xml" value="0.25" />
         <entry key="..\:/Users/jose_/Desktop/Fciencias/2022-2/PDM/Profesor/TareasPDM/app/src/main/res/layout/progress_dialog.xml" value="0.209375" />
+        <entry key="..\:/Users/jose_/Desktop/Fciencias/2022-2/PDM/Profesor/TareasPDM/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.11510416666666666" />
       </map>
     </option>
   </component>

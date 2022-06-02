@@ -1,4 +1,4 @@
-package com.pdm.tareas;
+package com.pdm.tareas.views;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -10,18 +10,16 @@ import android.view.View;
 import android.widget.EditText;
 import android.widget.TextView;
 
-import com.pdm.tareas.Models.Logeado;
-import com.pdm.tareas.Models.RegistroUsuarios;
-import com.pdm.tareas.Models.Usuario;
+import com.pdm.tareas.controllers.RegistroUsr;
 
 
-public class MainActivity extends AppCompatActivity {
+
+public class HomePage extends AppCompatActivity {
 
     private EditText userName;
     private EditText password;
-    private Logeado login;
     private TextView tvMessage;
-    private RegistroUsuarios registro;
+    private RegistroUsr registroUsr;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,12 +28,14 @@ public class MainActivity extends AppCompatActivity {
         userName = (EditText) findViewById(R.id.username);
         password = (EditText) findViewById(R.id.password);
         tvMessage = (TextView) findViewById(R.id.Messages);
-        registro = new RegistroUsuarios();
-        login = new Logeado();
+        registroUsr = new RegistroUsr();
     }
 
     public void register(View view){
-        Intent intent = new Intent(this, Registro.class);
+        Intent intent = new Intent(HomePage.this, Registro.class);
+        Bundle bundle = new Bundle();
+        bundle.putSerializable("registro", registroUsr);
+        intent.putExtras(bundle);
         startActivity(intent);
     }
 
@@ -47,14 +47,7 @@ public class MainActivity extends AppCompatActivity {
         Log.d("Login", username);
         Log.d("Login", pass);
 
-        if(registro.estaRegistrado(username, pass)){
-            Usuario usuario = registro.obtenerUsuario(userName.getText().toString(), password.getText().toString());
-            if(login.size() == 0){
-                login.add(usuario);
-            }else{
-                if(!login.isLogged(usuario))
-                    login.add(usuario);
-            }
+        if(registroUsr.estaRegistrado(username, pass)){
             Intent intent = new Intent(this, Menu.class);
             startActivity(intent);
         }else{
