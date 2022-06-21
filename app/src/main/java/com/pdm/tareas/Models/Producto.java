@@ -4,12 +4,12 @@ import java.io.Serializable;
 
 public class Producto implements Serializable {
 
-    private Integer imagen;
+    private byte[] imagen;
     private String nombre;
     private Double precio;
     private Integer cantidad;
 
-    public Producto(Integer imagen, String nombre, Double precio, Integer cantidad){
+    public Producto(byte[] imagen, String nombre, Double precio, Integer cantidad){
         this.imagen = imagen;
         this.nombre = nombre;
         this.precio = precio;
@@ -32,11 +32,11 @@ public class Producto implements Serializable {
         this.precio = precio;
     }
 
-    public Integer getImagen() {
-        return imagen;
+    public byte[] getImagen() {
+        return this.imagen;
     }
 
-    public void setImagen(Integer imagen) {
+    public void setImagen(byte[] imagen) {
         this.imagen = imagen;
     }
 

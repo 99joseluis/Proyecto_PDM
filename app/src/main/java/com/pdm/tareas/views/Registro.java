@@ -18,10 +18,10 @@ public class Registro extends AppCompatActivity {
     private EditText eTUsername;
     private EditText eTPassword;
     private EditText confirmPassword;
-    private RegistroUsr registroUsr;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        Log.d("Registro", "Entro Registro");
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_register);
         eTNombre = (EditText) findViewById(R.id.nameRegister);
@@ -31,11 +31,18 @@ public class Registro extends AppCompatActivity {
         confirmPassword = (EditText) findViewById(R.id.passwordRRegister);
 
 
-        Bundle bundle = getIntent().getExtras();
+       /* Bundle bundle = getIntent().getExtras();
+        Log.d("Registro", bundle.toString());
         if(bundle != null){
-            registroUsr = (RegistroUsr) bundle.getSerializable("registro");
+            try{
+                registroUsr = (RegistroUsr) bundle.getSerializable("registroUsr");
+            }catch(Exception e){
+                e.printStackTrace();
+            }finally {
+                registroUsr = new RegistroUsr(this);
+            }
         }
-        Log.d("Registro", registroUsr.toString());
+        Log.d("Registro", String.valueOf(registroUsr.size()));*/
     }
 
     public void goMenu(View view){
@@ -50,9 +57,10 @@ public class Registro extends AppCompatActivity {
         if(password.equals(cpassword)){
             usuario = new Usuario(nombre, apellidos, username, password);
             Log.d("Registro añade usuario", usuario.toString());
-            registroUsr.añadirUsr(usuario);
-            Log.d("Registro Final", registroUsr.toString());
-            Intent intent = new Intent(this, Menu.class);
+            Intent intent = new Intent(this, HomePage.class);
+            Bundle bundle = new Bundle();
+            bundle.putSerializable("Registro", usuario);
+            intent.putExtras(bundle);
             startActivity(intent);
         }
 

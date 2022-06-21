@@ -1,6 +1,7 @@
 package com.pdm.tareas.controllers;
 
 import android.content.Context;
+import android.graphics.BitmapFactory;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -17,7 +18,6 @@ import com.pdm.tareas.views.R;
 
 
 public class RegistroCarrito extends RecyclerView.Adapter<RegistroCarrito.ViewHolder> {
-
 
     private Producto[] productos;
     private Context context;
@@ -41,7 +41,7 @@ public class RegistroCarrito extends RecyclerView.Adapter<RegistroCarrito.ViewHo
         final Producto productoList = productos[position];
         holder.nombreProducto.setText(productoList.getNombre());
         holder.precioProducto.setText("$ "+productoList.getPrecio());
-        holder.imagenProducto.setImageResource(productoList.getImagen());
+        holder.imagenProducto.setImageBitmap(BitmapFactory.decodeByteArray(productoList.getImagen(), 0, productoList.getImagen().length));
         holder.cantidadProducto.setText("Cantidad Seleccionada "+ productoList.getCantidad());
 
         holder.itemView.setOnClickListener(new View.OnClickListener(){
